@@ -1,0 +1,2410 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>☠ سایه‌های ایران | آرشیو تاریک</title>
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+
+            font-family:
+                    Tahoma,
+                    Arial,
+                    sans-serif;
+
+            color:#fff;
+
+            background:#020204;
+
+            overflow-x:hidden;
+        }
+
+
+        /* =========================
+           HORROR BACKGROUND
+        ========================= */
+
+        body::before{
+
+            content:"";
+
+            position:fixed;
+
+            inset:0;
+
+            z-index:-20;
+
+            background-image:
+
+                    linear-gradient(
+                            rgba(0,0,0,.78),
+                            rgba(0,0,0,.68)
+                    ),
+
+                    url(
+                    "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2200&q=90"
+                    );
+
+            background-size:cover;
+
+            background-position:center;
+
+            filter:
+                    brightness(.38)
+                    contrast(1.45)
+                    saturate(.65);
+
+            transform:scale(1.04);
+        }
+
+
+        /* RED NIGHT GLOW */
+
+        body::after{
+
+            content:"";
+
+            position:fixed;
+
+            inset:0;
+
+            z-index:-19;
+
+            pointer-events:none;
+
+            background:
+
+                    radial-gradient(
+                            circle at 50% 40%,
+                            transparent 0%,
+                            rgba(50,0,10,.12) 35%,
+                            rgba(0,0,0,.82) 100%
+                    ),
+
+                    linear-gradient(
+                            90deg,
+                            rgba(80,0,15,.25),
+                            transparent 50%,
+                            rgba(80,0,15,.25)
+                    );
+        }
+
+
+        /* =========================
+           BLOOD MOON
+        ========================= */
+
+        .moon{
+
+            position:fixed;
+
+            width:190px;
+            height:190px;
+
+            border-radius:50%;
+
+            top:100px;
+            left:8%;
+
+            z-index:-10;
+
+            background:
+                    radial-gradient(
+                            circle at 35% 35%,
+                            #ff7777,
+                            #8b071b 55%,
+                            #280008 100%
+                    );
+
+            box-shadow:
+                    0 0 40px #ff183855,
+                    0 0 100px #ff183822;
+
+            opacity:.42;
+
+            animation:
+                    moonPulse 6s infinite alternate;
+        }
+
+        @keyframes moonPulse{
+
+            from{
+                opacity:.25;
+                transform:scale(.98);
+            }
+
+            to{
+                opacity:.48;
+                transform:scale(1.04);
+            }
+
+        }
+
+
+        /* =========================
+           FOG
+        ========================= */
+
+        .fog{
+
+            position:fixed;
+
+            left:-20%;
+
+            bottom:-80px;
+
+            width:140%;
+
+            height:330px;
+
+            z-index:50;
+
+            pointer-events:none;
+
+            background:
+
+                    radial-gradient(
+                            ellipse,
+                            rgba(220,220,220,.14),
+                            transparent 68%
+                    );
+
+            filter:blur(40px);
+
+            animation:
+                    fogMove 13s infinite alternate ease-in-out;
+        }
+
+        @keyframes fogMove{
+
+            from{
+                transform:translateX(-7%);
+            }
+
+            to{
+                transform:translateX(7%);
+            }
+
+        }
+
+
+        /* =========================
+           PARTICLES
+        ========================= */
+
+        .particles{
+
+            position:fixed;
+
+            inset:0;
+
+            z-index:-5;
+
+            pointer-events:none;
+        }
+
+        .particle{
+
+            position:absolute;
+
+            width:3px;
+            height:3px;
+
+            border-radius:50%;
+
+            background:#ff304f;
+
+            box-shadow:
+                    0 0 12px #ff304f;
+
+            opacity:.25;
+
+            animation:
+                    float 8s infinite linear;
+        }
+
+        @keyframes float{
+
+            from{
+                transform:
+                        translateY(110vh);
+            }
+
+            to{
+                transform:
+                        translateY(-10vh);
+            }
+
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header{
+
+            position:fixed;
+
+            top:0;
+            right:0;
+            left:0;
+
+            height:75px;
+
+            z-index:100;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:space-between;
+
+            padding:
+                    0 5%;
+
+            background:
+                    rgba(0,0,0,.72);
+
+            backdrop-filter:
+                    blur(18px);
+
+            border-bottom:
+                    1px solid #ff17351f;
+
+            box-shadow:
+                    0 10px 40px #0008;
+        }
+
+
+        .logo{
+
+            color:#ff2348;
+
+            font-size:21px;
+
+            font-weight:bold;
+
+            text-shadow:
+                    0 0 20px #ff1744;
+        }
+
+        .logo span{
+            color:#fff;
+        }
+
+
+        nav{
+
+            display:flex;
+
+            gap:6px;
+        }
+
+
+        nav a{
+
+            color:#999;
+
+            text-decoration:none;
+
+            padding:
+                    10px 14px;
+
+            border-radius:10px;
+
+            transition:.25s;
+        }
+
+
+        nav a:hover{
+
+            color:#fff;
+
+            background:#ff173515;
+        }
+
+
+        .live{
+
+            color:#ff526c;
+
+            font-size:10px;
+
+            padding:
+                    9px 14px;
+
+            border-radius:30px;
+
+            border:
+                    1px solid #ff173544;
+
+            background:#ff17350b;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero{
+
+            min-height:100vh;
+
+            display:flex;
+
+            align-items:center;
+
+            padding:
+                    130px 7%
+                    80px;
+        }
+
+
+        .hero-content{
+
+            max-width:850px;
+
+            animation:
+                    heroIn 1.2s ease;
+        }
+
+
+        @keyframes heroIn{
+
+            from{
+                opacity:0;
+                transform:translateY(45px);
+            }
+
+            to{
+                opacity:1;
+                transform:none;
+            }
+
+        }
+
+
+        .kicker{
+
+            display:inline-block;
+
+            padding:
+                    9px 16px;
+
+            margin-bottom:22px;
+
+            border-radius:30px;
+
+            color:#ff5c72;
+
+            background:#ff173510;
+
+            border:
+                    1px solid #ff173544;
+
+            font-size:11px;
+
+            box-shadow:
+                    0 0 30px #ff17350b;
+        }
+
+
+        .hero h1{
+
+            font-size:
+                    clamp(55px,10vw,115px);
+
+            line-height:.88;
+
+            letter-spacing:-5px;
+
+            margin-bottom:28px;
+
+            text-shadow:
+                    0 20px 60px #000;
+        }
+
+
+        .red{
+
+            color:#ff1f47;
+
+            text-shadow:
+                    0 0 20px #ff1744,
+                    0 0 70px #ff174466;
+        }
+
+
+        .hero p{
+
+            max-width:720px;
+
+            color:#aaa;
+
+            line-height:2.3;
+
+            font-size:14px;
+        }
+
+
+        .buttons{
+
+            display:flex;
+
+            flex-wrap:wrap;
+
+            gap:12px;
+
+            margin-top:30px;
+        }
+
+
+        .btn{
+
+            padding:
+                    14px 21px;
+
+            border-radius:13px;
+
+            border:0;
+
+            color:white;
+
+            font-family:inherit;
+
+            font-weight:bold;
+
+            cursor:pointer;
+
+            transition:.25s;
+        }
+
+
+        .btn:hover{
+
+            transform:
+                    translateY(-4px)
+                    scale(1.02);
+        }
+
+
+        .primary{
+
+            background:
+                    linear-gradient(
+                            135deg,
+                            #ff1744,
+                            #720b22
+                    );
+
+            box-shadow:
+                    0 15px 50px #ff174433;
+        }
+
+
+        .secondary{
+
+            background:#ffffff08;
+
+            border:
+                    1px solid #ffffff16;
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main{
+
+            width:
+                    min(1250px,92%);
+
+            margin:auto;
+        }
+
+
+        .section{
+
+            padding:
+                    100px 0;
+        }
+
+
+        .title{
+
+            margin-bottom:30px;
+        }
+
+
+        .title small{
+
+            color:#ff304f;
+
+            letter-spacing:2px;
+        }
+
+
+        .title h2{
+
+            font-size:40px;
+
+            margin:
+                    10px 0;
+        }
+
+
+        .title p{
+
+            color:#777;
+
+            line-height:2;
+        }
+
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .tools{
+
+            display:grid;
+
+            grid-template-columns:
+    1fr 190px 160px;
+
+            gap:10px;
+
+            margin-bottom:20px;
+        }
+
+
+        input,
+        select{
+
+            width:100%;
+
+            padding:14px;
+
+            border-radius:13px;
+
+            border:
+                    1px solid #39131d;
+
+            outline:none;
+
+            color:#fff;
+
+            background:
+                    rgba(5,4,6,.88);
+
+            font-family:inherit;
+        }
+
+
+        input:focus,
+        select:focus{
+
+            border-color:#ff304f;
+
+            box-shadow:
+                    0 0 25px #ff174415;
+        }
+
+
+        .result{
+
+            color:#777;
+
+            font-size:12px;
+
+            margin-bottom:20px;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .grid{
+
+            display:grid;
+
+            grid-template-columns:
+    repeat(3,1fr);
+
+            gap:22px;
+        }
+
+
+        .card{
+
+            overflow:hidden;
+
+            border-radius:23px;
+
+            background:
+                    linear-gradient(
+                            145deg,
+                            #180b10,
+                            #060507
+                    );
+
+            border:
+                    1px solid #3a121d;
+
+            box-shadow:
+                    0 25px 70px #000a;
+
+            transition:.3s;
+        }
+
+
+        .card:hover{
+
+            transform:
+                    translateY(-10px);
+
+            border-color:#ff304f77;
+
+            box-shadow:
+                    0 30px 90px #ff174422;
+        }
+
+
+        .card-image{
+
+            position:relative;
+
+            height:230px;
+
+            overflow:hidden;
+
+            background:#050505;
+        }
+
+
+        .card-image img{
+
+            width:100%;
+
+            height:100%;
+
+            object-fit:cover;
+
+            display:block;
+
+            filter:
+                    brightness(.55)
+                    contrast(1.3)
+                    saturate(.7);
+
+            transition:.7s;
+        }
+
+
+        .card:hover img{
+
+            transform:scale(1.1);
+
+            filter:
+                    brightness(.75)
+                    contrast(1.3)
+                    saturate(.8);
+        }
+
+
+        .card-image::after{
+
+            content:"";
+
+            position:absolute;
+
+            inset:0;
+
+            background:
+                    linear-gradient(
+                            transparent 30%,
+                            #000d
+                    );
+        }
+
+
+        .badge{
+
+            position:absolute;
+
+            right:12px;
+            top:12px;
+
+            z-index:2;
+
+            padding:
+                    7px 10px;
+
+            border-radius:20px;
+
+            color:#ff6278;
+
+            background:#000c;
+
+            border:
+                    1px solid #ff304544;
+
+            font-size:10px;
+        }
+
+
+        .number{
+
+            position:absolute;
+
+            left:12px;
+            top:12px;
+
+            z-index:2;
+
+            padding:
+                    6px 9px;
+
+            border-radius:9px;
+
+            color:#ddd;
+
+            background:#000b;
+
+            font-size:10px;
+        }
+
+
+        .content{
+
+            padding:20px;
+        }
+
+
+        .content h3{
+
+            font-size:19px;
+
+            margin-bottom:8px;
+        }
+
+
+        .location{
+
+            color:#ff526a;
+
+            font-size:11px;
+
+            margin-bottom:12px;
+        }
+
+
+        .description{
+
+            color:#999;
+
+            font-size:12px;
+
+            line-height:2;
+
+            min-height:72px;
+        }
+
+
+        .card-footer{
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:space-between;
+
+            padding-top:15px;
+
+            margin-top:15px;
+
+            border-top:
+                    1px solid #ffffff0a;
+        }
+
+
+        .stars{
+
+            color:#ffc04a;
+
+            font-size:11px;
+        }
+
+
+        .details{
+
+            border:0;
+
+            padding:
+                    9px 12px;
+
+            border-radius:10px;
+
+            color:#ff6279;
+
+            background:#ff173512;
+
+            cursor:pointer;
+        }
+
+
+        /* =========================
+           PAGINATION
+        ========================= */
+
+        .pagination{
+
+            display:flex;
+
+            justify-content:center;
+
+            flex-wrap:wrap;
+
+            gap:7px;
+
+            margin-top:35px;
+        }
+
+
+        .page{
+
+            min-width:40px;
+
+            height:40px;
+
+            border-radius:10px;
+
+            border:
+                    1px solid #35151d;
+
+            color:#aaa;
+
+            background:#090709;
+
+            cursor:pointer;
+        }
+
+
+        .page.active{
+
+            color:#fff;
+
+            background:#ff304f;
+
+            border-color:#ff304f;
+
+            box-shadow:
+                    0 0 25px #ff304f44;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .feature{
+
+            margin-top:60px;
+
+            padding:35px;
+
+            border-radius:25px;
+
+            background:
+                    linear-gradient(
+                            135deg,
+                            #1a070d,
+                            #070609
+                    );
+
+            border:
+                    1px solid #451520;
+        }
+
+
+        .feature h2{
+
+            color:#ff3655;
+
+            margin-bottom:15px;
+        }
+
+
+        .feature p{
+
+            color:#aaa;
+
+            line-height:2.3;
+        }
+
+
+        .warning{
+
+            margin-top:20px;
+
+            padding:15px;
+
+            border-radius:12px;
+
+            color:#aaa;
+
+            background:#ff173508;
+
+            border:
+                    1px solid #ff17351c;
+
+            line-height:2;
+        }
+
+
+        /* =========================
+           MODAL
+        ========================= */
+
+        .modal{
+
+            position:fixed;
+
+            inset:0;
+
+            z-index:500;
+
+            display:none;
+
+            align-items:center;
+
+            justify-content:center;
+
+            padding:20px;
+
+            background:#000e;
+
+            backdrop-filter:
+                    blur(18px);
+        }
+
+
+        .modal.show{
+            display:flex;
+        }
+
+
+        .modal-box{
+
+            width:
+                    min(700px,100%);
+
+            max-height:90vh;
+
+            overflow:auto;
+
+            padding:30px;
+
+            border-radius:25px;
+
+            background:
+                    linear-gradient(
+                            145deg,
+                            #1b080f,
+                            #060507
+                    );
+
+            border:
+                    1px solid #681d2e;
+
+            box-shadow:
+                    0 30px 120px #000;
+        }
+
+
+        .modal-image{
+
+            width:100%;
+
+            height:290px;
+
+            object-fit:cover;
+
+            border-radius:17px;
+
+            margin-bottom:20px;
+
+            filter:
+                    brightness(.65)
+                    contrast(1.25);
+        }
+
+
+        .close{
+
+            float:left;
+
+            width:36px;
+            height:36px;
+
+            border:0;
+
+            border-radius:10px;
+
+            color:#fff;
+
+            background:#ffffff0b;
+
+            cursor:pointer;
+
+            font-size:20px;
+        }
+
+
+        .modal-box h2{
+
+            color:#ff3b59;
+
+            margin-bottom:15px;
+        }
+
+
+        .modal-box p{
+
+            color:#bbb;
+
+            line-height:2.3;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer{
+
+            margin-top:70px;
+
+            padding:
+                    70px 7%;
+
+            text-align:center;
+
+            background:#020203;
+
+            border-top:
+                    1px solid #ffffff0a;
+        }
+
+
+        footer h3{
+
+            color:#ff304f;
+
+            margin-bottom:12px;
+        }
+
+
+        footer p{
+
+            color:#555;
+
+            font-size:11px;
+
+            line-height:2;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width:900px){
+
+            nav{
+                display:none;
+            }
+
+            .grid{
+                grid-template-columns:
+        repeat(2,1fr);
+            }
+
+            .tools{
+                grid-template-columns:
+        1fr 1fr;
+            }
+
+            .tools input{
+                grid-column:
+                        1/-1;
+            }
+
+        }
+
+
+        @media(max-width:600px){
+
+            .grid{
+                grid-template-columns:1fr;
+            }
+
+            .tools{
+                grid-template-columns:1fr;
+            }
+
+            .tools input{
+                grid-column:auto;
+            }
+
+            .moon{
+
+                width:110px;
+                height:110px;
+
+                left:5%;
+
+            }
+
+        }
+
+
+        /* =========================
+           EMPTY
+        ========================= */
+
+        .empty{
+
+            grid-column:
+                    1/-1;
+
+            padding:70px;
+
+            text-align:center;
+
+            color:#777;
+
+            border:
+                    1px dashed #40151f;
+
+            border-radius:20px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- MOON -->
+
+<div class="moon"></div>
+
+
+<!-- FOG -->
+
+<div class="fog"></div>
+
+
+<!-- PARTICLES -->
+
+<div class="particles">
+
+    <span class="particle"
+          style="left:8%;animation-delay:1s"></span>
+
+    <span class="particle"
+          style="left:17%;animation-delay:3s"></span>
+
+    <span class="particle"
+          style="left:29%;animation-delay:5s"></span>
+
+    <span class="particle"
+          style="left:43%;animation-delay:2s"></span>
+
+    <span class="particle"
+          style="left:58%;animation-delay:6s"></span>
+
+    <span class="particle"
+          style="left:71%;animation-delay:4s"></span>
+
+    <span class="particle"
+          style="left:83%;animation-delay:1s"></span>
+
+    <span class="particle"
+          style="left:94%;animation-delay:7s"></span>
+
+</div>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+
+        ☠
+        <span>سایه‌های</span>
+        ایران
+
+    </div>
+
+
+    <nav>
+
+        <a href="#archive">
+            پرونده‌ها
+        </a>
+
+        <a href="#about">
+            درباره
+        </a>
+
+    </nav>
+
+
+    <div class="live">
+
+        ● آرشیو فعال
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="kicker">
+
+            ⚠ DARK IRAN • CLASSIFIED ARCHIVE
+
+        </div>
+
+
+        <h1>
+
+            ایران
+
+            <br>
+
+            <span class="red">
+                تاریک
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            وارد آرشیوی شو که در آن مکان‌های
+            عجیب، متروکه و مرموز ایران ثبت شده‌اند.
+            چراغ‌ها را خاموش کن، صدا را زیاد کن
+            و وارد پرونده‌ها شو...
+
+        </p>
+
+
+        <div class="buttons">
+
+            <button
+                    class="btn primary"
+                    onclick="goArchive()"
+            >
+
+                👁 ورود به آرشیو
+
+            </button>
+
+
+            <button
+                    class="btn secondary"
+                    onclick="randomCase()"
+            >
+
+                🎲 جرأت داری؟
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN -->
+
+<main>
+
+    <section
+            class="section"
+            id="archive"
+    >
+
+        <div class="title">
+
+            <small>
+                CLASSIFIED FILES
+            </small>
+
+
+            <h2>
+                ☠ پرونده‌های تاریک
+            </h2>
+
+
+            <p>
+
+                دنبال یک مکان بگرد...
+
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="tools">
+
+            <input
+                    id="search"
+                    placeholder="🔎 اسم مکان را وارد کن..."
+            >
+
+
+            <select id="category">
+
+                <option value="all">
+                    همه
+                </option>
+
+                <option value="desert">
+                    🏜 کویر
+                </option>
+
+                <option value="forest">
+                    🌲 جنگل
+                </option>
+
+                <option value="island">
+                    🌊 جزیره
+                </option>
+
+                <option value="castle">
+                    🏚 قلعه
+                </option>
+
+                <option value="cave">
+                    🕳 غار و دره
+                </option>
+
+            </select>
+
+
+            <select id="sort">
+
+                <option value="id">
+                    شماره پرونده
+                </option>
+
+                <option value="fear">
+                    ☠ مرموزترین
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div
+                class="result"
+                id="result"
+        >
+            در حال بارگذاری...
+        </div>
+
+
+        <!-- GRID -->
+
+        <div
+                class="grid"
+                id="grid"
+        ></div>
+
+
+        <!-- PAGINATION -->
+
+        <div
+                class="pagination"
+                id="pagination"
+        ></div>
+
+
+        <!-- ABOUT -->
+
+        <div
+                class="feature"
+                id="about"
+        >
+
+            <h2>
+                ☠ هشدار
+            </h2>
+
+
+            <p>
+
+                این سایت یک پروژه سرگرمی است.
+                روایت‌های مربوط به ارواح، جن‌ها و
+                اتفاقات ماورایی در این آرشیو به‌عنوان
+                داستان و افسانه معرفی می‌شوند و نباید
+                به‌عنوان واقعیت اثبات‌شده در نظر گرفته شوند.
+
+            </p>
+
+
+            <div class="warning">
+
+                🌑 پیشنهاد:
+                شب وارد سایت شو،
+                چراغ‌ها را خاموش کن،
+                و با هدفون پرونده‌ها را ببین...
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        ☠ سایه‌های ایران
+    </h3>
+
+    <p>
+
+        DARK IRAN • CLASSIFIED ARCHIVE
+
+        <br>
+
+        پروژه نمایشی و سرگرمی
+
+    </p>
+
+</footer>
+
+
+<!-- MODAL -->
+
+<div
+        class="modal"
+        id="modal"
+>
+
+    <div class="modal-box">
+
+        <button
+                class="close"
+                onclick="closeModal()"
+        >
+            ×
+        </button>
+
+
+        <img
+                id="modalImage"
+                class="modal-image"
+                src=""
+                alt=""
+        >
+
+
+        <h2
+                id="modalTitle"
+        >
+            پرونده
+        </h2>
+
+
+        <p
+                id="modalText"
+        >
+        </p>
+
+
+        <br>
+
+
+        <button
+                class="btn primary"
+                onclick="closeModal()"
+        >
+
+            بستن پرونده
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    /* =====================================================
+       پرونده‌های اصلی
+    ===================================================== */
+
+    const realCases = [
+
+        {
+            name:"کال جنی",
+            location:"طبس، خراسان جنوبی",
+            category:"desert",
+            fear:5,
+            image:
+                "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "دره‌ای طبیعی با ساختارهای فرسایشی عجیب و روایت‌های محلی فراوان.",
+            real:true
+        },
+
+        {
+            name:"دره ستارگان",
+            location:"قشم، هرمزگان",
+            category:"island",
+            fear:5,
+            image:
+                "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "دره‌ای با ستون‌ها و دیواره‌های فرسایشی خاص.",
+            real:true
+        },
+
+        {
+            name:"دریاچه ارواح",
+            location:"نوشهر، مازندران",
+            category:"forest",
+            fear:5,
+            image:
+                "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "منطقه‌ای جنگلی با درختان خشکیده و فضای مه‌آلود.",
+            real:true
+        },
+
+        {
+            name:"قلعه جنی",
+            location:"کیش، هرمزگان",
+            category:"castle",
+            fear:5,
+            image:
+                "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "بنایی متروکه که داستان‌های محلی مختلفی درباره آن وجود دارد.",
+            real:true
+        },
+
+        {
+            name:"ریگ جن",
+            location:"کویر مرکزی ایران",
+            category:"desert",
+            fear:5,
+            image:
+                "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "ناحیه‌ای کویری و بسیار دورافتاده که با افسانه‌های محلی همراه شده است.",
+            real:true
+        },
+
+        {
+            name:"دودکش جن",
+            location:"زنجان",
+            category:"cave",
+            fear:4,
+            image:
+                "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "ساختارهای سنگی طبیعی که در اثر فرسایش شکل گرفته‌اند.",
+            real:true
+        },
+
+        {
+            name:"دره چاهکوه",
+            location:"قشم، هرمزگان",
+            category:"cave",
+            fear:4,
+            image:
+                "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "دره‌ای طبیعی با دیواره‌های سنگی و شیارهای فرسایشی.",
+            real:true
+        },
+
+        {
+            name:"قلعه الموت",
+            location:"قزوین",
+            category:"castle",
+            fear:4,
+            image:
+                "https://images.unsplash.com/photo-1520637836862-4d197d17c55a?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "دژی تاریخی در منطقه‌ای کوهستانی.",
+            real:true
+        },
+
+        {
+            name:"غار کرفتو",
+            location:"کردستان",
+            category:"cave",
+            fear:4,
+            image:
+                "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "غاری طبیعی و تاریخی با بخش‌های دست‌کند.",
+            real:true
+        },
+
+        {
+            name:"قلعه رودخان",
+            location:"فومن، گیلان",
+            category:"castle",
+            fear:4,
+            image:
+                "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "دژی تاریخی در میان جنگل‌های گیلان.",
+            real:true
+        },
+
+        {
+            name:"ماسوله",
+            location:"گیلان",
+            category:"forest",
+            fear:3,
+            image:
+                "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "روستایی کوهستانی و پلکانی در منطقه‌ای جنگلی.",
+            real:true
+        },
+
+        {
+            name:"باغ سنگی",
+            location:"سیرجان، کرمان",
+            category:"desert",
+            fear:4,
+            image:
+                "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=85",
+            description:
+                "باغی متفاوت که با سنگ‌ها و شاخه‌های خشک شکل گرفته است.",
+            real:true
+        }
+
+    ];
+
+
+    /* =====================================================
+       پرونده‌های نمایشی
+    ===================================================== */
+
+    const demoImages = [
+
+        "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85",
+
+        "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1000&q=85",
+
+        "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=85",
+
+        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85",
+
+        "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=85"
+
+    ];
+
+
+    const names = [
+
+        "خانه متروکه",
+        "جاده مه‌آلود",
+        "کلبه فراموش‌شده",
+        "تونل تاریک",
+        "دره خاموش",
+        "برج متروکه",
+        "روستای خاموش",
+        "کاروانسرای قدیمی",
+        "غار تاریک",
+        "قلعه فراموش‌شده"
+
+    ];
+
+
+    const categories = [
+
+        "desert",
+        "forest",
+        "island",
+        "castle",
+        "cave"
+
+    ];
+
+
+    let cases = [];
+
+
+    /* اصلی */
+
+    realCases.forEach(
+        (item,index)=>{
+
+            cases.push({
+
+                id:index+1,
+
+                ...item
+
+            });
+
+        });
+
+
+    /* تا 1000 پرونده */
+
+    for(
+        let i=realCases.length;
+        i<1000;
+        i++
+    ){
+
+        cases.push({
+
+            id:i+1,
+
+            name:
+                names[i%names.length]
+                +
+                " شماره "
+                +
+                (i+1),
+
+            location:
+                "پرونده نمایشی • ایران",
+
+            category:
+                categories[
+                i%categories.length
+                    ],
+
+            fear:
+                1+(i%5),
+
+            image:
+                demoImages[
+                i%demoImages.length
+                    ],
+
+            description:
+                "این پرونده نمایشی است و برای سرگرمی و نمایش رابط آرشیو ساخته شده است.",
+
+            real:false
+
+        });
+
+    }
+
+
+    /* =====================================================
+       تنظیمات
+    ===================================================== */
+
+    const perPage = 12;
+
+    let currentPage = 1;
+
+    let filtered = [...cases];
+
+
+    /* =====================================================
+       DOM
+    ===================================================== */
+
+    const grid =
+        document.getElementById("grid");
+
+    const pagination =
+        document.getElementById("pagination");
+
+    const result =
+        document.getElementById("result");
+
+    const search =
+        document.getElementById("search");
+
+    const category =
+        document.getElementById("category");
+
+    const sort =
+        document.getElementById("sort");
+
+
+    /* =====================================================
+       نمایش
+    ===================================================== */
+
+    function render(){
+
+        grid.innerHTML="";
+
+
+        const start =
+            (currentPage-1)
+            *
+            perPage;
+
+
+        const visible =
+            filtered.slice(
+                start,
+                start+perPage
+            );
+
+
+        if(
+            visible.length===0
+        ){
+
+            grid.innerHTML = `
+
+        <div class="empty">
+
+            🔎
+
+            <br><br>
+
+            چیزی پیدا نشد.
+
+        </div>
+
+        `;
+
+            renderPagination();
+
+            return;
+
+        }
+
+
+        visible.forEach(
+            item=>{
+
+                const card =
+                    document.createElement("article");
+
+
+                card.className="card";
+
+
+                const stars =
+                    "★".repeat(item.fear)
+                    +
+                    "☆".repeat(5-item.fear);
+
+
+                card.innerHTML = `
+
+        <div class="card-image">
+
+            <img
+
+                src="${item.image}"
+
+                alt="${item.name}"
+
+                onerror="
+                this.onerror=null;
+                this.src='https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85';
+                "
+
+            >
+
+            <div class="badge">
+
+                ${
+                    item.real
+                        ?
+                        "مکان واقعی"
+                        :
+                        "پرونده نمایشی"
+                }
+
+            </div>
+
+
+            <div class="number">
+
+                #${String(item.id).padStart(4,"0")}
+
+            </div>
+
+        </div>
+
+
+        <div class="content">
+
+            <h3>
+                ${item.name}
+            </h3>
+
+
+            <div class="location">
+
+                📍 ${item.location}
+
+            </div>
+
+
+            <div class="description">
+
+                ${item.description}
+
+            </div>
+
+
+            <div class="card-footer">
+
+                <span class="stars">
+
+                    ${stars}
+
+                </span>
+
+
+                <button
+                    class="details"
+                    onclick="openCase(${item.id})"
+                >
+
+                    پرونده ←
+
+                </button>
+
+            </div>
+
+        </div>
+
+        `;
+
+
+                grid.appendChild(card);
+
+            });
+
+
+        const total =
+            Math.ceil(
+                filtered.length/perPage
+            );
+
+
+        result.textContent =
+            `${filtered.length.toLocaleString("fa-IR")} پرونده • صفحه ${currentPage} از ${total}`;
+
+
+        renderPagination();
+
+    }
+
+
+    /* =====================================================
+       صفحه‌بندی
+    ===================================================== */
+
+    function renderPagination(){
+
+        pagination.innerHTML="";
+
+
+        const total =
+            Math.ceil(
+                filtered.length/perPage
+            );
+
+
+        if(total<=1){
+            return;
+        }
+
+
+        const start =
+            Math.max(
+                1,
+                currentPage-3
+            );
+
+
+        const end =
+            Math.min(
+                total,
+                currentPage+3
+            );
+
+
+        for(
+            let i=start;
+            i<=end;
+            i++
+        ){
+
+            const btn =
+                document.createElement("button");
+
+
+            btn.className="page";
+
+
+            if(
+                i===currentPage
+            ){
+
+                btn.classList.add(
+                    "active"
+                );
+
+            }
+
+
+            btn.textContent=i;
+
+
+            btn.onclick=()=>{
+
+                currentPage=i;
+
+                render();
+
+                goArchive();
+
+            };
+
+
+            pagination.appendChild(btn);
+
+        }
+
+    }
+
+
+    /* =====================================================
+       فیلتر
+    ===================================================== */
+
+    function filter(){
+
+        const q =
+            search.value
+                .trim()
+                .toLowerCase();
+
+
+        const cat =
+            category.value;
+
+
+        filtered =
+            cases.filter(
+                item=>{
+
+                    const text =
+                        (
+                            item.name
+                            +
+                            " "
+                            +
+                            item.location
+                        )
+                            .toLowerCase();
+
+
+                    return (
+
+                        text.includes(q)
+
+                        &&
+
+                        (
+                            cat==="all"
+                            ||
+                            item.category===cat
+                        )
+
+                    );
+
+                });
+
+
+        if(
+            sort.value==="fear"
+        ){
+
+            filtered.sort(
+                (a,b)=>
+                    b.fear-a.fear
+            );
+
+        }
+        else{
+
+            filtered.sort(
+                (a,b)=>
+                    a.id-b.id
+            );
+
+        }
+
+
+        currentPage=1;
+
+        render();
+
+    }
+
+
+    search.addEventListener(
+        "input",
+        filter
+    );
+
+    category.addEventListener(
+        "change",
+        filter
+    );
+
+    sort.addEventListener(
+        "change",
+        filter
+    );
+
+
+    /* =====================================================
+       MODAL
+    ===================================================== */
+
+    function openCase(id){
+
+        const item =
+            cases.find(
+                x=>x.id===id
+            );
+
+
+        if(!item){
+            return;
+        }
+
+
+        const modal =
+            document.getElementById(
+                "modal"
+            );
+
+
+        const image =
+            document.getElementById(
+                "modalImage"
+            );
+
+
+        image.src =
+            item.image;
+
+
+        image.onerror =
+            function(){
+
+                this.onerror=null;
+
+                this.src=
+                    "https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=85";
+
+            };
+
+
+        document.getElementById(
+            "modalTitle"
+        ).textContent =
+
+            `☠ پرونده #${String(item.id).padStart(4,"0")} — ${item.name}`;
+
+
+        const stars =
+            "★".repeat(item.fear)
+            +
+            "☆".repeat(5-item.fear);
+
+
+        document.getElementById(
+            "modalText"
+        ).innerHTML = `
+
+        <b>📍 مکان:</b>
+        ${item.location}
+
+        <br><br>
+
+        <b>☠ درجه مرموز بودن:</b>
+
+        <span style="color:#ffc04a">
+            ${stars}
+        </span>
+
+        <br><br>
+
+        ${item.description}
+
+        <br><br>
+
+        ${
+            item.real
+
+                ?
+
+                "این پرونده مربوط به یک مکان واقعی است. داستان‌ها و روایت‌های ماورایی درباره آن لزوماً واقعیت علمی اثبات‌شده نیستند."
+
+                :
+
+                "⚠️ این پرونده نمایشی است و برای سرگرمی ساخته شده."
+        }
+
+    `;
+
+
+        modal.classList.add(
+            "show"
+        );
+
+    }
+
+
+    /* =====================================================
+       CLOSE
+    ===================================================== */
+
+    function closeModal(){
+
+        document
+            .getElementById("modal")
+            .classList.remove("show");
+
+    }
+
+
+    document
+        .getElementById("modal")
+        .addEventListener(
+            "click",
+            function(e){
+
+                if(
+                    e.target===this
+                ){
+
+                    closeModal();
+
+                }
+
+            });
+
+
+    /* =====================================================
+       RANDOM
+    ===================================================== */
+
+    function randomCase(){
+
+        const index =
+            Math.floor(
+                Math.random()
+                *
+                cases.length
+            );
+
+
+        openCase(
+            cases[index].id
+        );
+
+    }
+
+
+    /* =====================================================
+       SCROLL
+    ===================================================== */
+
+    function goArchive(){
+
+        document
+            .getElementById("archive")
+            .scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+    }
+
+
+    /* =====================================================
+       START
+    ===================================================== */
+
+    render();
+
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
